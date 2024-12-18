@@ -1,7 +1,7 @@
 # Definirea datelor initiale
-preturi_produse = {"mere": 1.0, "banane": 0.5, "portocale": 0.8, "mango": 1.5}
-stoc_initial = {"mere": 10, "banane": 20, "portocale": 15, "mango": 5}
-vanzari = [("mere", 4), ("banane", 6), ("portocale", 10), ("mango", 2)]
+preturi_produse = {"capsuni": 2.0, "piersici": 1.5, "portocale": 0.8, "cirese": 1.5}
+stoc_initial = {"capsuni": 10, "piersici": 20, "portocale": 15, "cirese": 6}
+vanzari = [("capsuni", 4), ("piersici", 6), ("portocale", 10), ("cirese", 2)]
 
 # Calcularea venitului total si actualizarea stocului
 venit_total = sum(preturi_produse[p] * c for p, c in vanzari if p in preturi_produse)
