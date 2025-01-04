@@ -51,6 +51,7 @@
     "Python.Inverted_Index.executor": "Run",
     "Python.MaxAndMin.executor": "Run",
     "Python.NumberGuessingGame.executor": "Run",
+    "Python.QuizApp.executor": "Run",
     "Python.RemoveDuplicateFromList.executor": "Run",
     "Python.RemoveVocaleFromString.executor": "Run",
     "Python.TemaCurs.executor": "Run",
