@@ -57,4 +57,13 @@ class QuizApp:
         for i in range(4):
             self.options_buttons[i].config(text=question_data["options"][i], state="normal")
 
+    def check_answer(self, selected_option):
+        correct_answer = self.questions[self.current_question]["answer"]
+
+        if selected_option == correct_answer:
+            self.score += 1
+            messagebox.showinfo("Corect!", "Răspunsul este corect!")
+        else:
+            correct_option = self.questions[self.current_question]["options"][correct_answer]
+            messagebox.showerror("Greșit!", f"Răspunsul corect era: {correct_option}")
     
