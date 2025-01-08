@@ -2,8 +2,8 @@ import tkinter as tk
 from tkinter import messagebox
 
 class QuizApp:
-    def __init__(self, root):
-        self.root = root
+    def __init__(self, main_window):
+        self.root = main_window
         self.root.title("Quiz App")
 
         self.questions = [
@@ -37,17 +37,22 @@ class QuizApp:
         self.current_question = 0
         self.score = 0
 
-        self.question_label = tk.Label(root, text="", font=("Arial", 16), wraplength=400)
+        self.question_label = tk.Label(main_window, text="", font=("Arial", 16), wraplength=400)
         self.question_label.pack(pady=20)
 
         self.options_buttons = []
         for i in range(4):
-            button = tk.Button(root, text="", font=("Arial", 12), width=30, height=2,
-                               command=lambda i=i: self.check_answer(i))
+            button = tk.Button(main_window, text="", font=("Arial", 12), width=30, height=2)
+            button.config(command=self.create_command(i))
             button.pack(pady=5)
             self.options_buttons.append(button)
 
         self.load_question()
+
+    def create_command(self, i):
+        def command():
+            self.check_answer(i)
+        return command
 
     def load_question(self):
         question_data = self.questions[self.current_question]
@@ -66,4 +71,11 @@ class QuizApp:
         else:
             correct_option = self.questions[self.current_question]["options"][correct_answer]
             messagebox.showerror("Greșit!", f"Răspunsul corect era: {correct_option}")
+
+        self.current_question += 1
+        if self.current_question < len(self.questions):
+            self.load_question()
+        else:
+            self.show_final_score()
+
     
