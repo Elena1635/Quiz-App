@@ -42,7 +42,7 @@ class QuizApp:
 
         self.options_buttons = []
         for i in range(4):
-            button = tk.Button(main_window, text="", font=("Arial", 12), width=30, height=2)
+            button = tk.Button(main_window, text="", font=("Arial", 12), width=30, height=2, )
             button.config(command=self.create_command(i))
             button.pack(pady=5)
             self.options_buttons.append(button)
@@ -78,4 +78,11 @@ class QuizApp:
         else:
             self.show_final_score()
 
-    
+    def show_final_score(self):
+        messagebox.showinfo("Final", f"Scorul tău final este: {self.score} din {len(self.questions)} întrebări.")
+        self.root.quit()
+
+main_window = tk.Tk()
+quiz_app = QuizApp(main_window)
+
+main_window.mainloop()
