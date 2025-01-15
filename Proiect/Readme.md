@@ -31,7 +31,17 @@ Aplicația oferă suport pentru imagini personalizate și include funcții de pu
    - Biblioteca folosită pentru manipularea imaginilor.
    - Funcții utilizate: redimensionare, încărcare imagini, conversii.
 
+Biblioteca Pillow trebuie instalată astfel:
 
+Dacă utilizezi un IDE precum PyCharm, Pillow poate fi instalat direct din setările interpretatorului Python. Accesează:
+
+File > Settings > Python Interpreter (sau Project:  > Python Interpreter).
+
+Caută Pillow în lista de pachete disponibile și apasă Install.
+
+Alternativ, Pillow poate fi instalat din linia de comandă folosind:
+          
+    pip install pillow
 #### Fișiere Necesare
 1. **Imagini**:
    - `Vrei_să_fii_milionar.png`: Imaginea de fundal.
