@@ -534,7 +534,7 @@ class QuizApp:
         self.clear_window()
 
         if self.score == len(self.questions):
-            image_path = "trofeu.webp"
+            image_path = ("trofeu.webp")
             message = "Felicitări! Ești un câștigător!"
         elif self.score >= len(self.questions) // 2:
             image_path = "mai incearca.jpg"
