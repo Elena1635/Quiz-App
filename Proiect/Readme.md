@@ -76,5 +76,4 @@ Asigură-te că toate fișierele necesare sunt în același director cu scriptul
 5. **Resetare joc**:
    - Aplicația revine la starea inițială, permițând utilizatorului să joace din nou.
 
-
-
+   
