@@ -1,0 +1,20 @@
+Probleme cu fibonacci(n):
+
+Nu gestionează cazul în care n nu este un număr întreg.
+Folosește un dicționar gol ca valoare implicită pentru argumentul memo, ceea ce poate cauza probleme de memorie (dacă memo este modificat într-un apel,
+se păstrează modificarea și pentru alte apeluri).
+Probleme cu circle_area(radius):
+
+Nu gestionează cazul în care radius nu este un număr (ex. circle_area("abc") ar genera o eroare de tip TypeError).
+Probleme cu find_max(numbers):
+
+Recursivitatea pe liste mari poate cauza depășirea limitei maxime de recursivitate (RecursionError).
+Nu gestionează cazul în care lista conține elemente care nu sunt numere.
+Probleme cu geometric_mean(numbers):
+
+product poate deveni prea mare pentru liste mari, ceea ce duce la erori de tip OverflowError.
+Nu verifică dacă elementele listei sunt numere (ex. geometric_mean(["a", "b", "c"]) ar genera TypeError).
+Probleme în main():
+
+Variabilele radius și numbers sunt setate intenționat la valori problematice (ex. radius = -5, numbers = [], numbers = [1, 2, 0, 4]).
+Dacă main() ar primi input de la utilizator fără validare, programul ar putea crăpa.
