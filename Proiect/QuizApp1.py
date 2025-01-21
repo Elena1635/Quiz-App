@@ -1,6 +1,7 @@
+"""
 import tkinter as tk
 from PIL import Image, ImageTk
-"""""
+
 
 class QuizApp:
     def __init__(self, main_window):
@@ -409,13 +410,14 @@ quiz_app = QuizApp(main_window)
 # Pornim aplicația
 main_window.mainloop()
 """
-
+import tkinter as tk
+from PIL import Image, ImageTk
 
 class QuizApp:
     def __init__(self, main_window):
         self.root = main_window
         self.root.title("Quiz App")
-        self.root.geometry("800x600")
+        self.root.geometry( "800x600")
 
         # Încărcăm imaginea de fundal
         self.background_image = Image.open("Vrei_sa_fii_milionar.png")
