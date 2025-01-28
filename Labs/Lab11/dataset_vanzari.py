@@ -8,12 +8,12 @@ produse = ["Tableta", "Laptop", "Televizor", "Monitor", "Camera Foto", "Mouse", 
 data = []
 
 for zi in range(1, zile + 1):
-    numar_produse = np.random.randint(5, 16)  # Între 5 și 15 produse pe zi
+    numar_produse = np.random.randint(5, 16)
     produse_aleatoare = np.random.choice(produse, numar_produse)
-    preturi = np.random.normal(40, 8, numar_produse).clip(min=5)  # Prețuri pozitive
-    cantitati = np.random.randint(1, 11, numar_produse)  # Între 1 și 10 unități
-    promotii = np.random.choice([0, 1], numar_produse, p=[0.7, 0.3])  # 30% șansă pentru promoții
-    preturi_finale = preturi * (1 - 0.2 * promotii)  # Reducere de 20% dacă e promoție
+    preturi = np.random.normal(40, 8, numar_produse).clip(min=5)
+    cantitati = np.random.randint(1, 11, numar_produse)
+    promotii = np.random.choice([0, 1], numar_produse, p=[0.7, 0.3])
+    preturi_finale = preturi * (1 - 0.2 * promotii)
 
     for produs, pret, cantitate, promotie, pret_final in zip(produse_aleatoare, preturi, cantitati, promotii, preturi_finale):
         data.append({
@@ -24,7 +24,7 @@ for zi in range(1, zile + 1):
             "Pret Final": round(pret_final, 2),
             "Cantitate": cantitate,
             "Total Vanzari": round(pret_final * cantitate, 2),
-            "Cost": round(pret_final * cantitate * 0.7, 2)  # Costul e 70% din prețul final
+            "Cost": round(pret_final * cantitate * 0.7, 2)
         })
 
 df = pd.DataFrame(data)

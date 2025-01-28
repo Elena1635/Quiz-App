@@ -1,5 +1,4 @@
 def inverted_index(documents):
-
     inverted_idx = {}
 
     for index, document in enumerate(documents):
@@ -14,17 +13,24 @@ def inverted_index(documents):
     return inverted_idx
 
 def get_documents():
-    num_documents = int(input("Introduceti numarul de documente: "))
+    while True:
+        try:
+            num_documents = int(input("Introduceți numărul de documente: "))
+            if num_documents < 1:
+                print("Eroare: Trebuie să introduceți un număr pozitiv.")
+                continue
+            break
+        except ValueError:
+            print("Eroare: Trebuie să introduceți un număr întreg valid!")
 
     documents = []
     for i in range(num_documents):
-        document = input(f"Introduceti documentul {i + 1}: ")
+        document = input(f"Introduceți documentul {i + 1}: ")
         documents.append(document)
 
     return documents
 
 documents = get_documents()
-
 index = inverted_index(documents)
 
 print("Indexul inversat:")

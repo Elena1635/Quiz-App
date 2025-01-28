@@ -10,7 +10,7 @@ daily_sales = []
 
 for day in range(num_days):
 
-    num_products = np.random.randint(5, 16)
+    num_products = np.random.randint(5, 20)
 
     prices = np.random.normal(loc=40, scale=8, size=num_products)
     prices = np.clip(prices, 10, None)

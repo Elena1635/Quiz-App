@@ -1,4 +1,4 @@
-rdef numara_cuvinte(propozitie):
+def numara_cuvinte(propozitie):
     propozitie = propozitie.lower()
     cuvinte = propozitie.split()
     frecventa = {}
@@ -12,4 +12,4 @@ propozitie = input("Introdu o propoziție: ")
 rezultat = numara_cuvinte(propozitie)
 print("Frecvența fiecărui cuvânt în propoziție este:")
 for cuvant, aparitii in rezultat.items():
-    print(f"{cuvant}: {aparitii}")el
+    print(f"{cuvant}: {aparitii}")

@@ -3,19 +3,11 @@ def create_list_from_input():
     user_input = input()
     return user_input.split()
 
-def remove_duplicates_from_word(word):
-
-    return ''.join(sorted(set(word), key=word.index))
-
 def remove_duplicates(input_list):
-
-    return list(dict.fromkeys(input_list))
+    return list(dict.fromkeys(input_list))  # Păstrează ordinea originală și elimină duplicatele
 
 user_list = create_list_from_input()
+unique_list = remove_duplicates(user_list)  # Elimină doar duplicatele complete, nu și literele din cuvinte
 
-user_list_no_duplicates_in_words = [remove_duplicates_from_word(word) for word in user_list]
-
-unique_list = remove_duplicates(user_list_no_duplicates_in_words)
-
-print("Lista fără duplicate în cuvinte și în listă este:")
+print("Lista fără duplicate în listă este:")
 print(unique_list)
